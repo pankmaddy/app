@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHeader"
+        app:cardCornerRadius="@dimen/ten_dp"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/ten_dp"
+            android:text="TID"
+            android:background="@color/dark_gray"
+            android:id="@+id/header"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="@dimen/twoHundred_dp"
+            android:layout_height="wrap_content"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/five_dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_width="match_parent"
+        tools:itemCount="2"
+        android:visibility="visible"
+        android:id="@+id/recyclerView"
+        tools:listitem="@layout/item_mid_child_model"
+        app:layout_constraintTop_toBottomOf="@+id/cardHeader"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
